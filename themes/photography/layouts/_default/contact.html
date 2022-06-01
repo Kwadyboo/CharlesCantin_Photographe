@@ -1,0 +1,60 @@
+{{ define "main" }}
+
+<div class="hero is-dark is-medium" {{ with .Params.heroimage }}
+    style="background: url({{ . }}) center top; background-size:cover;" {{ end }}>
+    <div class="hero-head">
+        <div class="container">
+            <h1 class="title is-2">
+                {{ .Title }}
+            </h1>
+            {{ with .Params.herotext }}
+            <h2 class="title subtitle is-4">
+                {{ . }}
+            </h2>
+            {{ end }}
+        </div>
+    </div>
+    <div class="hero-body"></div>
+    <div class="hero-foot">
+        {{ with .Params.buttons }}
+        <nav class="tabs">
+            <div class="container">
+                <ul>
+                    {{ range . }}
+                    <li>
+                        <a class="has-background-primary" {{ with .id }}id="{{ . }}" {{ end }}
+                            {{ with .href }}href="{{ . | safeURL }}" {{ end }}>
+                            <span class="icon"><i class="{{ .icon }}" aria-hidden="true"></i></span>
+                            <span>{{ .name }}</span>
+                        </a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+        </nav>
+        {{ end }}
+    </div>
+</div>
+
+<div class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <div class="content">
+                    {{ .Content }}
+                </div>
+            </div>
+            {{ with .Params.map }}
+            <div class="column is-one-third">
+                <div class="map-responsive">
+                    <iframe
+                        src="https://maps.google.com/maps?hl=en&amp;q={{ . | htmlEscape }}&amp;ie=UTF8&amp;t=&amp;z=15&amp;iwloc=B&amp;output=embed"
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>
+
+{{ end }}
