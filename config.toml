@@ -1,0 +1,63 @@
+baseURL = 'http://example.org/'
+languageCode = 'fr-fr'
+title = 'Charles Cantin'
+theme = "photography"
+
+[[menu.main]]
+  name = "Accueil"
+  url = "/accueil"
+
+[[menu.main]]
+  name = "Galerie"
+  url = "/galerie"
+
+[[menu.main]]
+  name = "Tarifs"
+  url = "/tarifs"
+
+[[menu.main]]
+  name = "Contact"
+  url = "/contact"
+
+[[menu.main]]
+  name = "A propos"
+  url = "/a-propos"
+
+[[menu.social]]
+name = "Facebook"
+url = "https://facebook.com/"
+pre = "<i class='fab fa-facebook'></i>"
+
+[[menu.social]]
+name = "Instagram"
+url = "https://instagram.com/"
+pre = "<i class='fab fa-instagram'></i>"
+
+[[menu.footer]]
+name = "Accueil"
+url = "/accueil"
+
+[[menu.footer]]
+name = "Galerie"
+url = "/galerie"
+
+[[menu.footer]]
+name = "Tarifs"
+url = "/tarifs"
+
+[[menu.footer]]
+name = "Contact"
+url = "/contact"
+
+[[menu.footer]]
+name = "A propos"
+url = "/a-propos"
+
+[[menu.footer]]
+name = "Protection des données"
+url = "/protection-des-donnees"
+
+[params]
+    author = "Pexels"
+    authorImage = "/images/Autres/pexels-frank-cone-2985018.jpg"
+
